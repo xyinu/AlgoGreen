@@ -12,6 +12,7 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
   const [check, setCheck] = useState(true);
   const [early, setEarly] = useState(true);
   const [vote, setVote] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(
     () =>
@@ -33,6 +34,9 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
   };
   const handleVote = () => {
     setVote((prev) => !prev);
+  };
+  const handleSubmit = () => {
+    setSubmitted((prev) => !prev);
   };
 
   const handleAddInputs = () => {
@@ -366,7 +370,7 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
         <button onClick={handleBack} className="butin" style={{ background: '#219D80' }}>
           Back
         </button>
-        <button className="submit">Submit</button>
+        {submitted?<div class="lds-ring"><div></div><div></div><div></div><div></div></div>:<button className="submit" onClick={handleSubmit}>Submit</button>}
       </div>
     </body>
   );

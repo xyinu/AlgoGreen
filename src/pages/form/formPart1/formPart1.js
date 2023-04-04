@@ -1,5 +1,6 @@
 import './formPart1.css';
 import { useEffect, useState } from 'react';
+import upload from '../../../images/upload.png'
 
 const FormPart1 = ({ handleNext }) => {
   const [inputs, setInputs] = useState([<input className="input" placeholder="https://" />]);
@@ -23,6 +24,20 @@ const FormPart1 = ({ handleNext }) => {
         <input className="input" placeholder="AlgoGreen" />
       </div>
       <div className="form-input">
+        <p style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Logo (optional)</p>
+        <p style={{ opacity: 0.9, marginBottom: 14 }}>
+        JPG, PNG, GIF, or SVG of no more than 3MB. We recommend 1024x1024px.
+        </p>
+        <div class="image-upload">
+        <label for="file-input">
+          <div style={{background:'white',height:'60px',width:'60px',textAlign:'center',borderRadius:'6px',borderStyle:'dotted',opacity:0.5}}>
+    <img src={upload} width='20' height='20' style={{marginTop:'20px'}}/>
+          </div>
+  </label>
+        <input className="input" type='file' id="file-input" style={{paddingLeft:0}}/>
+  </div>
+      </div>
+      <div className="form-input">
         <p style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Description</p>
         <p style={{ opacity: 0.9, marginBottom: 10, width: '65%' }}>
           Describe your DAO's purpose in a few sentences. This is listed on the Explore page so new
@@ -31,7 +46,7 @@ const FormPart1 = ({ handleNext }) => {
         <textarea className="input-big" placeholder="Type your Summary..." />
       </div>
       <div className="form-input">
-        <p style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Links</p>
+        <p style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Links (optional)</p>
         <p style={{ opacity: 0.9, marginBottom: 10 }}>
           Links to your DAO's website, social media profiles, Discord, or other places your
           community gathers.
