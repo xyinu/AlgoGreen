@@ -6,9 +6,9 @@ import TopHome from './topHome/topHome';
 const HomePage = () => {
   return (
     <>
-      <TopHome/>
-      <Sec1Home/>
-      <Sec2Home/>
+      <TopHome />
+      <Sec1Home />
+      <Sec2Home />
     </>
   );
 };
