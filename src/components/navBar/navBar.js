@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import algogreen from '../../images/3.png';
+import algogreen from '../../images/Algo.png';
 import './navBar.css';
 
 const NavBar = () => {
@@ -13,7 +13,7 @@ const NavBar = () => {
             alt=""
             src={algogreen}
             width="110"
-            height="110"
+            height="149"
             className="d-inline-block align-top"
           />
           <p className="nav-bar-title-text"> AlgoGreen</p>

@@ -1,6 +1,7 @@
 import './sec2Home.css';
 import dog from '../../../images/dogs.jpg';
 import rocket from '../../../images/rocket.png';
+import book from '../../../images/book.png';
 import unicorn from '../../../images/unicorn.jpg';
 
 const sec2Home = () => {
@@ -12,7 +13,8 @@ const sec2Home = () => {
           paddingTop: '20px',
           fontWeight: 1000,
           textAlign: 'center',
-          color: 'white'
+          color: 'white',
+          marginTop: '0px',
         }}
       >
         What's Next
@@ -37,16 +39,16 @@ const sec2Home = () => {
           >
             Create DAO
           </p>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
+          <li>Launch your Green DAOs</li>
+          <li>Customise your governance structure</li>
+          <li>Build your community today with AlgoGreen!</li>
           <a href="form" style={{ textDecoration: 'none' }}>
             <div className="create">Create</div>
           </a>
         </div>
         <div className="mid-info">
           <img
-            src={rocket}
+            src={book}
             width="70"
             height="70"
             style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: 30 }}
@@ -63,9 +65,9 @@ const sec2Home = () => {
           >
             View All Causes
           </p>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
+          <li>View all the causes started with AlgoGreen</li>
+          <li>Choose the cause that you are passionate about</li>
+          <li>Contribute and start impacting the world through Green DAOs today!</li>
           <div className="create">View</div>
         </div>
         <div className="right-info">
@@ -87,9 +89,9 @@ const sec2Home = () => {
           >
             Learn About AlgoGreen
           </p>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
+          <li>Mission of AlgoGreen</li>
+          <li>Who are we?</li>
+          <li>What can AlgoGreen do for you?</li>
           <div className="create">Learn</div>
         </div>
       </div>

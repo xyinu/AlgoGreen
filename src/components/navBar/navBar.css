@@ -10,7 +10,7 @@
 .nav-bar-title-text {
   font-weight: bold;
   font-size: 40px;
-  color: white;
+  color: #92D050;
   margin-left: 10px;
 }
 
@@ -20,8 +20,8 @@
   display: flex;
   align-items: center;
   padding-top: 50px;
-  padding-left: 312px;
-  padding-right: 312px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .nav-bar-mid {

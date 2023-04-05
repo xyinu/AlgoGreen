@@ -5,9 +5,9 @@ const TopHome = () => {
   return (
     <body className="container">
       <NavBar />
-      <p className="top-text">Give Hope For People</p>
+      <p className="top-text"></p>
       <p className="mid-text">
-        Helping Each Other <br /> Can Make The World Better
+        Revolutionising DAO developer tools for the green community
       </p>
       <p className="btm-text">
         We Seek Out World Changers And Difference Makers Around The <br />
