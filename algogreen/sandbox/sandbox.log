@@ -1,0 +1,1596 @@
+* docker compose down
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopped
+Container algorand-sandbox-indexer  Removing
+Container algorand-sandbox-indexer  Removed
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-postgres  Stopped
+Container algorand-sandbox-postgres  Removing
+Container algorand-sandbox-postgres  Removed
+Container algorand-sandbox-algod  Stopped
+Container algorand-sandbox-algod  Removing
+Container algorand-sandbox-algod  Removed
+Network sandbox_default  Removing
+Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error: No such image: sandbox_algod
+Error: No such image: sandbox_indexer
+* docker compose rm -f
+No stopped containers
+* docker rmi 9317da48e173
+9c7d934885d3
+Deleted: sha256:9317da48e1732622d862dd89cc11de8479c5d2292cc888213585e9b3ac788729
+Deleted: sha256:9c7d934885d3c2588480c806c7c50f263fe6ee38a31241685aba7031d3205de2
+* docker compose down
+* docker rmi sandbox_algod sandbox_indexer
+Error: No such image: sandbox_algod
+Error: No such image: sandbox_indexer
+* docker compose rm -f
+No stopped containers
+* docker rmi 
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+.clean file found in sandbox directory. Rebuilding images...
+* docker compose build --no-cache
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.50kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 73B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.17.5
+#3 DONE 3.3s
+
+#4 [1/7] FROM docker.io/library/golang:1.17.5@sha256:c72fa9afc50b3303e8044cf28fb358b48032a548e1825819420fd40155a131cb
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 117.62kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/7] RUN echo "Installing from source.  -- "
+#6 0.296 Installing from source.  -- 
+#6 DONE 0.3s
+
+#7 [3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 0.681 Get:1 http://security.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+#7 0.685 Get:2 http://deb.debian.org/debian bullseye InRelease [116 kB]
+#7 0.868 Get:3 http://security.debian.org/debian-security bullseye-security/main amd64 Packages [236 kB]
+#7 0.918 Get:4 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+#7 1.021 Get:5 http://deb.debian.org/debian bullseye/main amd64 Packages [8183 kB]
+#7 1.476 Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [14.6 kB]
+#7 2.783 Fetched 8642 kB in 2s (3499 kB/s)
+#7 2.783 Reading package lists...
+#7 3.516 Reading package lists...
+#7 4.206 Building dependency tree...
+#7 4.346 Reading state information...
+#7 4.491 python3 is already the newest version (3.9.2-3).
+#7 4.491 python3 set to manually installed.
+#7 4.491 The following additional packages will be installed:
+#7 4.491   bsdextrautils libcurl4 ncal
+#7 4.492 Suggested packages:
+#7 4.492   calendar whois vacation mailutils gettext-base git-daemon-run
+#7 4.492   | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+#7 4.492   git-mediawiki git-svn
+#7 4.492 Recommended packages:
+#7 4.493   patch less
+#7 4.547 The following NEW packages will be installed:
+#7 4.548   apt-utils bsdextrautils bsdmainutils ncal
+#7 4.548 The following packages will be upgraded:
+#7 4.550   curl git libcurl4
+#7 4.613 3 upgraded, 4 newly installed, 0 to remove and 58 not upgraded.
+#7 4.613 Need to get 6766 kB of archives.
+#7 4.613 After this operation, 1721 kB of additional disk space will be used.
+#7 4.613 Get:1 http://deb.debian.org/debian bullseye/main amd64 bsdextrautils amd64 2.36.1-8+deb11u1 [145 kB]
+#7 4.617 Get:2 http://security.debian.org/debian-security bullseye-security/main amd64 curl amd64 7.74.0-1.3+deb11u7 [270 kB]
+#7 4.657 Get:3 http://deb.debian.org/debian bullseye/main amd64 apt-utils amd64 2.2.4 [439 kB]
+#7 4.666 Get:4 http://security.debian.org/debian-security bullseye-security/main amd64 libcurl4 amd64 7.74.0-1.3+deb11u7 [346 kB]
+#7 4.698 Get:5 http://deb.debian.org/debian bullseye/main amd64 ncal amd64 12.1.7+nmu3 [30.1 kB]
+#7 4.698 Get:6 http://deb.debian.org/debian bullseye/main amd64 bsdmainutils all 12.1.7+nmu3 [16.4 kB]
+#7 4.701 Get:7 http://security.debian.org/debian-security bullseye-security/main amd64 git amd64 1:2.30.2-1+deb11u2 [5518 kB]
+#7 5.175 debconf: delaying package configuration, since apt-utils is not installed
+#7 5.217 Fetched 6766 kB in 0s (15.2 MB/s)
+#7 5.241 Selecting previously unselected package bsdextrautils.
+#7 5.241 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15709 files and directories currently installed.)
+#7 5.264 Preparing to unpack .../0-bsdextrautils_2.36.1-8+deb11u1_amd64.deb ...
+#7 5.267 Unpacking bsdextrautils (2.36.1-8+deb11u1) ...
+#7 5.314 Selecting previously unselected package apt-utils.
+#7 5.315 Preparing to unpack .../1-apt-utils_2.2.4_amd64.deb ...
+#7 5.318 Unpacking apt-utils (2.2.4) ...
+#7 5.423 Selecting previously unselected package ncal.
+#7 5.425 Preparing to unpack .../2-ncal_12.1.7+nmu3_amd64.deb ...
+#7 5.428 Unpacking ncal (12.1.7+nmu3) ...
+#7 5.461 Selecting previously unselected package bsdmainutils.
+#7 5.463 Preparing to unpack .../3-bsdmainutils_12.1.7+nmu3_all.deb ...
+#7 5.468 Unpacking bsdmainutils (12.1.7+nmu3) ...
+#7 5.497 Preparing to unpack .../4-curl_7.74.0-1.3+deb11u7_amd64.deb ...
+#7 5.505 Unpacking curl (7.74.0-1.3+deb11u7) over (7.74.0-1.3+deb11u1) ...
+#7 5.580 Preparing to unpack .../5-libcurl4_7.74.0-1.3+deb11u7_amd64.deb ...
+#7 5.589 Unpacking libcurl4:amd64 (7.74.0-1.3+deb11u7) over (7.74.0-1.3+deb11u1) ...
+#7 5.668 Preparing to unpack .../6-git_1%3a2.30.2-1+deb11u2_amd64.deb ...
+#7 5.730 Unpacking git (1:2.30.2-1+deb11u2) over (1:2.30.2-1) ...
+#7 7.827 Setting up apt-utils (2.2.4) ...
+#7 7.836 Setting up bsdextrautils (2.36.1-8+deb11u1) ...
+#7 7.848 update-alternatives: using /usr/bin/write.ul to provide /usr/bin/write (write) in auto mode
+#7 7.853 Setting up ncal (12.1.7+nmu3) ...
+#7 7.861 Setting up bsdmainutils (12.1.7+nmu3) ...
+#7 7.870 Setting up git (1:2.30.2-1+deb11u2) ...
+#7 7.908 Setting up libcurl4:amd64 (7.74.0-1.3+deb11u7) ...
+#7 7.915 Setting up curl (7.74.0-1.3+deb11u7) ...
+#7 7.923 Processing triggers for libc-bin (2.31-13+deb11u2) ...
+#7 DONE 8.0s
+
+#8 [4/7] COPY . /tmp
+#8 DONE 0.0s
+
+#9 [5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#9 0.315 /tmp/images/algod /go
+#9 0.315 Installing algod with options:
+#9 0.315   BINDIR = /node
+#9 0.315   CHANNEL = stable
+#9 0.315   URL = 
+#9 0.315   BRANCH = 
+#9 0.316   SHA = 
+#9 0.331 Current Version = 0
+#9 2.892 updater binary was installed at /tmp/images/algod/updater
+#9 4.247 Latest Version = 12885884928
+#9 4.247 New version found
+#9 4.268 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#9 40.24 Update Downloaded to /tmp/tmp.UheovQleaO/12885884928.tar.gz
+#9 40.24 Expanding update...
+#9 44.08 Validating update...
+#9 44.08 Starting the new update script to complete the installation...
+#9 44.09 ... Resuming installation from the latest update script
+#9 44.09 Current Version = 0
+#9 44.09 Backing up current binary files...
+#9 44.10 Backing up current data files from /node/data...
+#9 44.11 Installing new binary files...
+#9 45.03 Installing new data files into /node/data...
+#9 45.04 Copying genesis files locally
+#9 45.05 Checking for new ledger in /node/data
+#9 45.45 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#9 45.46 Updating genesis files for default network
+#9 45.61 New genesis ID, resetting wallets
+#9 45.61 New Ledger - restoring genesis accounts in /node/data
+#9 45.61 New Ledger - importing rootkeys for genesis accounts
+#9 45.83 Imported 0 keys
+#9 45.83 Applying migration fixups...
+#9 45.83 Deleting existing log files in /node/data
+#9 45.84 Install complete - restart node manually
+#9 DONE 46.7s
+
+#10 [6/7] RUN sed -i "s/NETWORK_NUM_ROUNDS/30000/" "//tmp/images/algod/DevModeNetwork.json" &&  /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "//tmp/images/algod/DevModeNetwork.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"  --archival ""
+#10 0.525 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#10 0.532 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#10 0.532 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#10 0.535 Generating Wallet1's keys for a period of 30000 rounds
+#10 0.558 Generating Wallet2's keys for a period of 30000 rounds
+#10 0.558 Generating Wallet3's keys for a period of 30000 rounds
+#10 5.158 participation key generation for Wallet2 completed successfully
+#10 5.184 participation key generation for Wallet3 completed successfully
+#10 5.354 participation key generation for Wallet1 completed successfully
+#10 5.360 https://github.com/algorandfoundation/specs/tree/44fa607d6051730f5264526bf3c108d51f0eadb6 100000
+#10 5.360 Created 3 new rootkeys and 3 new partkeys in 4.845275929s.
+#10 5.360 NOTICE: Participation keys are valid for a period of 30000 rounds. After this many rounds the network will stall unless new keys are registered.
+#10 7.810 Network sandnet created under /opt/testnetwork
+#10 7.820 Configuring network with the following arguments:
+#10 7.820 {   'algod_port': '4001',
+#10 7.820     'archival': False,
+#10 7.820     'bin_dir': '/node',
+#10 7.820     'bootstrap_url': '',
+#10 7.820     'data_dir': '/opt/data',
+#10 7.820     'genesis_file': '/tmp/',
+#10 7.820     'kmd_port': '4002',
+#10 7.820     'network_dir': '/opt/testnetwork',
+#10 7.820     'network_template': '//tmp/images/algod/DevModeNetwork.json',
+#10 7.820     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#10 7.820     'start_script': '/opt/start_algod.sh'}
+#10 7.820 Creating a private network.
+#10 7.820 Start commands for /opt/start_algod.sh:
+#10 7.820 ("startCommands=['/node/goal network start -r /opt/testnetwork', '/node/kmd "
+#10 7.820  "start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']")
+#10 7.820 Finished preparing start script '/opt/start_algod.sh' under /opt/
+#10 7.820 Creating symlink /opt/data -> /opt/testnetwork/Node
+#10 7.820 writing to node_config_path=[/opt/testnetwork/Node/config.json] config json: { "Version": 12, "GossipFanout": 1, "EndpointAddress": "0.0.0.0:4001", "DNSBootstrapID": "", "IncomingConnectionsLimit": 0, "Archival":false, "isIndexerActive":false, "EnableDeveloperAPI":true }
+#10 7.820 writing to kmd_config_path=[/opt/testnetwork/Node/kmd-v0.5/kmd_config.json] config json: { "address":"0.0.0.0:4002",  "allowed_origins":["*"] }
+#10 DONE 7.9s
+
+#11 [7/7] WORKDIR /opt/data
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 2.3s done
+#12 writing image sha256:08f2104511d5ffe831eef9334d606dcf9ffab8b8b6eb4ec0a485f429a81a74dd done
+#12 naming to docker.io/library/sandbox-algod done
+#12 DONE 2.3s
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 611B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 34B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.17.5-alpine
+#3 DONE 1.6s
+
+#4 [1/7] FROM docker.io/library/golang:1.17.5-alpine@sha256:4918412049183afe42f1ecaf8f5c2a88917c2eab153ce5ecf4bf2d55c1507b74
+#4 DONE 0.0s
+
+#5 [2/7] WORKDIR /opt/indexer
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 196B done
+#6 DONE 0.0s
+
+#7 [3/7] RUN apk add --no-cache git bzip2 make bash libtool boost-dev autoconf automake g++
+#7 0.270 fetch https://dl-cdn.alpinelinux.org/alpine/v3.15/main/x86_64/APKINDEX.tar.gz
+#7 0.930 fetch https://dl-cdn.alpinelinux.org/alpine/v3.15/community/x86_64/APKINDEX.tar.gz
+#7 1.410 (1/88) Upgrading musl (1.2.2-r7 -> 1.2.2-r8)
+#7 1.450 (2/88) Upgrading zlib (1.2.11-r3 -> 1.2.12-r3)
+#7 1.483 (3/88) Installing m4 (1.4.18-r2)
+#7 1.508 (4/88) Installing libbz2 (1.0.8-r1)
+#7 1.530 (5/88) Installing perl (5.34.0-r1)
+#7 2.116 (6/88) Installing autoconf (2.71-r0)
+#7 2.162 (7/88) Installing automake (1.16.4-r1)
+#7 2.217 (8/88) Installing ncurses-terminfo-base (6.3_p20211120-r1)
+#7 2.239 (9/88) Installing ncurses-libs (6.3_p20211120-r1)
+#7 2.281 (10/88) Installing readline (8.1.1-r0)
+#7 2.304 (11/88) Installing bash (5.1.16-r0)
+#7 2.346 Executing bash-5.1.16-r0.post-install
+#7 2.353 (12/88) Installing boost1.77-atomic (1.77.0-r1)
+#7 2.373 (13/88) Installing libgcc (10.3.1_git20211027-r0)
+#7 2.398 (14/88) Installing boost1.77-chrono (1.77.0-r1)
+#7 2.414 (15/88) Installing boost1.77-container (1.77.0-r1)
+#7 2.638 (16/88) Installing boost1.77-context (1.77.0-r1)
+#7 2.651 (17/88) Installing boost1.77-contract (1.77.0-r1)
+#7 2.671 (18/88) Installing boost1.77-thread (1.77.0-r1)
+#7 2.693 (19/88) Installing boost1.77-coroutine (1.77.0-r1)
+#7 2.920 (20/88) Installing boost1.77-date_time (1.77.0-r1)
+#7 2.956 (21/88) Installing boost1.77-fiber (1.77.0-r1)
+#7 3.168 (22/88) Installing boost1.77-filesystem (1.77.0-r1)
+#7 3.191 (23/88) Installing boost1.77-graph (1.77.0-r1)
+#7 3.230 (24/88) Installing xz-libs (5.2.5-r1)
+#7 3.249 (25/88) Installing boost1.77-iostreams (1.77.0-r1)
+#7 3.878 (26/88) Installing boost1.77-locale (1.77.0-r1)
+#7 3.904 (27/88) Installing boost1.77-log (1.77.0-r1)
+#7 4.158 (28/88) Installing boost1.77-log_setup (1.77.0-r1)
+#7 4.621 (29/88) Installing boost1.77-math (1.77.0-r1)
+#7 4.662 (30/88) Installing boost1.77-prg_exec_monitor (1.77.0-r1)
+#7 4.681 (31/88) Installing boost1.77-program_options (1.77.0-r1)
+#7 4.707 (32/88) Installing expat (2.5.0-r0)
+#7 4.728 (33/88) Installing libffi (3.4.2-r1)
+#7 4.747 (34/88) Installing gdbm (1.22-r0)
+#7 4.764 (35/88) Installing libstdc++ (10.3.1_git20211027-r0)
+#7 4.803 (36/88) Installing mpdecimal (2.5.1-r1)
+#7 4.824 (37/88) Installing sqlite-libs (3.36.0-r0)
+#7 4.876 (38/88) Installing python3 (3.9.16-r0)
+#7 5.680 (39/88) Installing boost1.77-python3 (1.77.0-r1)
+#7 5.701 (40/88) Installing boost1.77-random (1.77.0-r1)
+#7 5.716 (41/88) Installing boost1.77-regex (1.77.0-r1)
+#7 5.741 (42/88) Installing boost1.77-serialization (1.77.0-r1)
+#7 6.022 (43/88) Installing boost1.77-stacktrace_basic (1.77.0-r1)
+#7 6.037 (44/88) Installing boost1.77-stacktrace_noop (1.77.0-r1)
+#7 6.052 (45/88) Installing boost1.77-system (1.77.0-r1)
+#7 6.068 (46/88) Installing boost1.77-timer (1.77.0-r1)
+#7 6.084 (47/88) Installing boost1.77-type_erasure (1.77.0-r1)
+#7 6.102 (48/88) Installing boost1.77-unit_test_framework (1.77.0-r1)
+#7 6.739 (49/88) Installing boost1.77-wave (1.77.0-r1)
+#7 6.779 (50/88) Installing boost1.77-wserialization (1.77.0-r1)
+#7 6.800 (51/88) Installing boost1.77-json (1.77.0-r1)
+#7 6.822 (52/88) Installing boost1.77-nowide (1.77.0-r1)
+#7 6.836 (53/88) Installing boost1.77-libs (1.77.0-r1)
+#7 6.849 (54/88) Installing boost1.77 (1.77.0-r1)
+#7 6.896 (55/88) Installing linux-headers (5.10.41-r0)
+#7 7.062 (56/88) Installing bzip2-dev (1.0.8-r1)
+#7 7.078 (57/88) Installing icu-libs (69.1-r1)
+#7 7.836 (58/88) Installing icu (69.1-r1)
+#7 7.870 (59/88) Installing pkgconf (1.8.1-r0)
+#7 7.890 (60/88) Installing icu-dev (69.1-r1)
+#7 7.973 (61/88) Installing xz-dev (5.2.5-r1)
+#7 7.999 (62/88) Installing zlib-dev (1.2.12-r3)
+#7 8.017 (63/88) Installing boost1.77-dev (1.77.0-r1)
+#7 10.62 (64/88) Installing boost-dev (1.77.0-r1)
+#7 10.63 (65/88) Installing bzip2 (1.0.8-r1)
+#7 11.06 (66/88) Installing binutils (2.37-r3)
+#7 11.25 (67/88) Installing libgomp (10.3.1_git20211027-r0)
+#7 11.28 (68/88) Installing libatomic (10.3.1_git20211027-r0)
+#7 11.30 (69/88) Installing libgphobos (10.3.1_git20211027-r0)
+#7 11.43 (70/88) Installing gmp (6.2.1-r1)
+#7 11.49 (71/88) Installing isl22 (0.22-r0)
+#7 11.58 (72/88) Installing mpfr4 (4.1.0-r0)
+#7 11.74 (73/88) Installing mpc1 (1.2.1-r0)
+#7 11.76 (74/88) Installing gcc (10.3.1_git20211027-r0)
+#7 13.63 (75/88) Installing musl-dev (1.2.2-r8)
+#7 13.83 (76/88) Installing libc-dev (0.7.2-r3)
+#7 13.84 (77/88) Installing g++ (10.3.1_git20211027-r0)
+#7 15.14 (78/88) Installing brotli-libs (1.0.9-r5)
+#7 15.17 (79/88) Installing nghttp2-libs (1.46.0-r0)
+#7 15.20 (80/88) Installing libcurl (7.80.0-r6)
+#7 15.23 (81/88) Installing pcre2 (10.40-r0)
+#7 15.26 (82/88) Installing git (2.34.7-r0)
+#7 15.69 (83/88) Installing perl-error (0.17029-r1)
+#7 15.70 (84/88) Installing perl-git (2.34.7-r0)
+#7 15.73 (85/88) Installing git-perl (2.34.7-r0)
+#7 15.75 (86/88) Installing libltdl (2.4.6-r7)
+#7 15.76 (87/88) Installing libtool (2.4.6-r7)
+#7 15.83 (88/88) Installing make (4.3-r0)
+#7 15.87 Executing busybox-1.34.1-r3.trigger
+#7 15.89 OK: 527 MiB in 101 packages
+#7 DONE 17.3s
+
+#8 [4/7] COPY images/indexer/disabled.go /tmp/disabled.go
+#8 DONE 0.0s
+
+#9 [5/7] COPY images/indexer/start.sh /tmp/start.sh
+#9 DONE 0.0s
+
+#10 [6/7] COPY images/indexer/install.sh /tmp/install.sh
+#10 DONE 0.0s
+
+#11 [7/7] RUN /tmp/install.sh
+#11 0.312 Cloning into '/opt/indexer'...
+#11 2.967 go: downloading github.com/sirupsen/logrus v1.8.1
+#11 2.967 go: downloading github.com/spf13/pflag v1.0.5
+#11 2.967 go: downloading github.com/spf13/cobra v1.3.0
+#11 3.375 go: downloading github.com/spf13/viper v1.10.0
+#11 3.402 go: downloading github.com/getkin/kin-openapi v0.107.0
+#11 3.607 go: downloading github.com/labstack/echo/v4 v4.9.1
+#11 30.39 go: downloading github.com/algorand/go-algorand-sdk v1.9.1
+#11 30.39 go: downloading github.com/jackc/pgx/v4 v4.13.0
+#11 30.39 go: downloading github.com/algorand/oapi-codegen v1.12.0-algorand.0
+#11 30.40 go: downloading github.com/stretchr/testify v1.8.1
+#11 30.47 go: downloading github.com/labstack/echo-contrib v0.11.0
+#11 30.58 go: downloading gopkg.in/yaml.v3 v3.0.1
+#11 30.65 go: downloading github.com/orlangure/gnomock v0.12.0
+#11 30.70 go: downloading github.com/algorand/go-codec/codec v1.1.8
+#11 30.78 go: downloading github.com/jackc/pgconn v1.10.0
+#11 30.78 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#11 30.89 go: downloading github.com/algorand/go-deadlock v0.2.2
+#11 30.93 go: downloading github.com/prometheus/client_golang v1.10.0
+#11 30.98 go: downloading github.com/davecgh/go-spew v1.1.1
+#11 31.02 go: downloading github.com/pmezard/go-difflib v1.0.0
+#11 31.04 go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+#11 31.06 go: downloading gopkg.in/yaml.v2 v2.4.0
+#11 31.12 go: downloading golang.org/x/sys v0.1.0
+#11 31.12 go: downloading github.com/fsnotify/fsnotify v1.5.1
+#11 31.14 go: downloading github.com/magiconair/properties v1.8.5
+#11 31.14 go: downloading github.com/mitchellh/mapstructure v1.4.3
+#11 31.17 go: downloading github.com/spf13/afero v1.6.0
+#11 31.32 go: downloading github.com/spf13/cast v1.4.1
+#11 31.39 go: downloading github.com/spf13/jwalterweatherman v1.1.0
+#11 31.39 go: downloading github.com/subosito/gotenv v1.2.0
+#11 31.46 go: downloading gopkg.in/ini.v1 v1.66.2
+#11 31.48 go: downloading github.com/go-openapi/jsonpointer v0.19.5
+#11 31.48 go: downloading github.com/invopop/yaml v0.1.0
+#11 31.50 go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+#11 31.53 go: downloading github.com/labstack/gommon v0.4.0
+#11 31.62 go: downloading golang.org/x/crypto v0.1.0
+#11 31.65 go: downloading golang.org/x/net v0.1.0
+#11 31.68 go: downloading github.com/stretchr/objx v0.5.0
+#11 31.69 go: downloading github.com/jackc/pgio v1.0.0
+#11 31.72 go: downloading github.com/jackc/pgproto3/v2 v2.1.1
+#11 31.89 go: downloading github.com/jackc/pgtype v1.8.1
+#11 31.93 go: downloading github.com/golang-jwt/jwt v3.2.2+incompatible
+#11 32.04 go: downloading github.com/valyala/fasttemplate v1.2.1
+#11 32.04 go: downloading golang.org/x/time v0.0.0-20201208040808-7e3f01d25324
+#11 32.10 go: downloading github.com/prometheus/common v0.25.0
+#11 32.10 go: downloading github.com/jackc/puddle v1.1.3
+#11 32.15 go: downloading github.com/jackc/chunkreader/v2 v2.0.1
+#11 32.15 go: downloading github.com/jackc/pgpassfile v1.0.0
+#11 32.15 go: downloading github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b
+#11 32.18 go: downloading golang.org/x/text v0.4.0
+#11 32.19 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#11 32.19 go: downloading github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5
+#11 32.20 go: downloading github.com/lib/pq v1.10.2
+#11 32.41 go: downloading github.com/docker/docker v1.13.1
+#11 33.51 go: downloading github.com/docker/go-connections v0.4.0
+#11 33.51 go: downloading github.com/google/uuid v1.3.0
+#11 33.51 go: downloading go.uber.org/zap v1.17.0
+#11 33.51 go: downloading golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+#11 33.51 go: downloading github.com/russross/blackfriday/v2 v2.1.0
+#11 33.61 go: downloading github.com/beorn7/perks v1.0.1
+#11 33.63 go: downloading github.com/cespare/xxhash/v2 v2.1.2
+#11 33.66 go: downloading github.com/golang/protobuf v1.5.2
+#11 33.69 go: downloading github.com/prometheus/client_model v0.2.0
+#11 33.70 go: downloading github.com/prometheus/procfs v0.6.0
+#11 33.72 go: downloading github.com/hashicorp/hcl v1.0.0
+#11 33.79 go: downloading github.com/pelletier/go-toml v1.9.4
+#11 33.93 go: downloading github.com/go-openapi/swag v0.19.5
+#11 33.93 go: downloading github.com/mattn/go-colorable v0.1.12
+#11 33.93 go: downloading github.com/mattn/go-isatty v0.0.14
+#11 33.93 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#11 33.93 go: downloading github.com/google/go-querystring v1.0.0
+#11 33.94 go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+#11 33.99 go: downloading github.com/docker/go-units v0.4.0
+#11 34.06 go: downloading github.com/docker/distribution v2.7.1+incompatible
+#11 34.11 go: downloading github.com/pkg/errors v0.9.1
+#11 34.12 go: downloading go.uber.org/atomic v1.7.0
+#11 34.13 go: downloading go.uber.org/multierr v1.6.0
+#11 34.13 go: downloading google.golang.org/protobuf v1.28.0
+#11 34.59 go: downloading github.com/mailru/easyjson v0.7.7
+#11 34.60 go: downloading github.com/opencontainers/go-digest v1.0.0-rc1
+#11 34.71 go: downloading github.com/josharian/intern v1.0.0
+#11 36.75 git submodule update --init && cd third_party/go-algorand && \
+#11 36.75 	make crypto/libs/`scripts/ostype.sh`/`scripts/archtype.sh`/lib/libsodium.a
+#11 36.78 Submodule 'go-algorand' (https://github.com/algorand/go-algorand) registered for path 'third_party/go-algorand'
+#11 36.78 Cloning into '/opt/indexer/third_party/go-algorand'...
+#11 55.97 Submodule path 'third_party/go-algorand': checked out '9ddd136dd926db354ce28344cb7596f3bcecdb42'
+#11 55.98 make[1]: Entering directory '/opt/indexer/third_party/go-algorand'
+#11 56.51 go: downloading github.com/spf13/cobra v0.0.3
+#11 56.51 go: downloading github.com/gofrs/flock v0.7.0
+#11 56.53 go: downloading github.com/algorand/websocket v1.4.5
+#11 56.54 go: downloading github.com/gorilla/mux v1.8.0
+#11 56.55 go: downloading github.com/algorand/msgp v1.1.53
+#11 57.01 go: downloading github.com/algorand/avm-abi v0.1.1
+#11 57.10 go: downloading github.com/algorand/falcon v0.0.0-20220727072124-02a2a64c4414
+#11 57.10 go: downloading github.com/algorand/go-sumhash v0.1.0
+#11 57.11 go: downloading github.com/davidlazar/go-crypto v0.0.0-20170701192655-dcfb0a7ac018
+#11 57.20 go: downloading github.com/jmoiron/sqlx v1.2.0
+#11 57.24 go: downloading github.com/karalabe/usb v0.0.2
+#11 57.25 go: downloading github.com/mattn/go-sqlite3 v1.10.0
+#11 57.50 go: downloading github.com/consensys/gnark-crypto v0.7.0
+#11 57.68 go: downloading github.com/olivere/elastic v6.2.14+incompatible
+#11 57.85 go: downloading gopkg.in/sohlich/elogrus.v3 v3.0.0-20180410122755-1fa29e2f2009
+#11 57.94 go: downloading github.com/golang/snappy v0.0.4
+#11 58.02 go: downloading github.com/DataDog/zstd v1.5.2
+#11 58.09 go: downloading github.com/fatih/color v1.7.0
+#11 58.22 go: downloading github.com/dchest/siphash v1.2.1
+#11 58.38 go: downloading github.com/aws/aws-sdk-go v1.16.5
+#11 58.47 go: downloading github.com/miekg/dns v1.1.27
+#11 62.84 go: downloading golang.org/x/term v0.1.0
+#11 62.84 go: downloading github.com/cpuguy83/go-md2man v1.0.8
+#11 62.85 go: downloading github.com/mattn/go-colorable v0.1.11
+#11 62.86 go: downloading github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
+#11 62.87 go: downloading github.com/mmcloughlin/addchain v0.4.0
+#11 63.11 go: downloading github.com/russross/blackfriday v1.5.2
+#11 64.84 mkdir -p crypto/copies/linux/amd64
+#11 64.84 cp -R crypto/libsodium-fork crypto/copies/linux/amd64/libsodium-fork
+#11 64.90 cd crypto/copies/linux/amd64/libsodium-fork && \
+#11 64.90 	./autogen.sh --prefix /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64 && \
+#11 64.90 	./configure --disable-shared --prefix="/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64" && \
+#11 64.90 	make && \
+#11 64.90 	make install
+#11 65.11 autoreconf: export WARNINGS=
+#11 65.11 autoreconf: Entering directory '.'
+#11 65.12 autoreconf: configure.ac: not using Gettext
+#11 66.12 autoreconf: running: aclocal --force -I m4
+#11 68.86 autoreconf: configure.ac: tracing
+#11 70.29 autoreconf: configure.ac: creating directory build-aux
+#11 70.29 autoreconf: running: libtoolize --copy --force
+#11 70.56 libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+#11 70.56 libtoolize: copying file 'build-aux/ltmain.sh'
+#11 70.59 libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+#11 70.59 libtoolize: copying file 'm4/libtool.m4'
+#11 70.66 libtoolize: copying file 'm4/ltoptions.m4'
+#11 70.75 libtoolize: copying file 'm4/ltsugar.m4'
+#11 70.85 libtoolize: copying file 'm4/ltversion.m4'
+#11 70.94 libtoolize: copying file 'm4/lt~obsolete.m4'
+#11 71.03 autoreconf: configure.ac: not using Intltool
+#11 71.03 autoreconf: configure.ac: not using Gtkdoc
+#11 71.03 autoreconf: running: aclocal --force -I m4
+#11 73.76 autoreconf: running: /usr/bin/autoconf --force
+#11 75.12 configure.ac:75: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:75: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 configure.ac:75: the top level
+#11 75.12 configure.ac:122: warning: The macro `AC_HELP_STRING' is obsolete.
+#11 75.12 configure.ac:122: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+#11 75.12 configure.ac:122: the top level
+#11 75.12 configure.ac:126: warning: $as_echo is obsolete; use AS_ECHO(["message"]) instead
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_pthread.m4:88: AX_PTHREAD is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 configure.ac:126: the top level
+#11 75.12 configure.ac:154: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:154: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:1534: AC_ARG_ENABLE is expanded from...
+#11 75.12 configure.ac:154: the top level
+#11 75.12 configure.ac:154: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:154: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:1534: AC_ARG_ENABLE is expanded from...
+#11 75.12 configure.ac:154: the top level
+#11 75.12 configure.ac:185: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:185: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:1534: AC_ARG_ENABLE is expanded from...
+#11 75.12 configure.ac:185: the top level
+#11 75.12 configure.ac:204: warning: The macro `AC_PROG_CC_C99' is obsolete.
+#11 75.12 configure.ac:204: You should run autoupdate.
+#11 75.12 ./lib/autoconf/c.m4:1659: AC_PROG_CC_C99 is expanded from...
+#11 75.12 configure.ac:204: the top level
+#11 75.12 configure.ac:206: warning: AC_LINK_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+#11 75.12 ./lib/autoconf/specific.m4:364: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+#11 75.12 configure.ac:206: the top level
+#11 75.12 configure.ac:211: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:211: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 m4/ax_check_define.m4:50: AC_CHECK_DEFINE is expanded from...
+#11 75.12 configure.ac:211: the top level
+#11 75.12 configure.ac:216: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:216: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:216: the top level
+#11 75.12 configure.ac:219: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:219: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:594: AS_CASE is expanded from...
+#11 75.12 configure.ac:219: the top level
+#11 75.12 configure.ac:223: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:223: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 configure.ac:223: the top level
+#11 75.12 configure.ac:232: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:232: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:232: the top level
+#11 75.12 configure.ac:233: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:233: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:233: the top level
+#11 75.12 configure.ac:233: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:233: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:233: the top level
+#11 75.12 configure.ac:237: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:237: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2823: _AC_COMPILE_IFELSE is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2839: AC_COMPILE_IFELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:594: AS_CASE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 configure.ac:237: the top level
+#11 75.12 configure.ac:255: warning: The macro `AC_HELP_STRING' is obsolete.
+#11 75.12 configure.ac:255: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:1534: AC_ARG_ENABLE is expanded from...
+#11 75.12 configure.ac:255: the top level
+#11 75.12 configure.ac:271: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:271: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:594: AS_CASE is expanded from...
+#11 75.12 configure.ac:271: the top level
+#11 75.12 configure.ac:278: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:278: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:594: AS_CASE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 configure.ac:278: the top level
+#11 75.12 configure.ac:293: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:293: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:293: the top level
+#11 75.12 configure.ac:294: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:294: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:294: the top level
+#11 75.12 configure.ac:297: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:297: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2823: _AC_COMPILE_IFELSE is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2839: AC_COMPILE_IFELSE is expanded from...
+#11 75.12 configure.ac:297: the top level
+#11 75.12 configure.ac:309: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:309: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:309: the top level
+#11 75.12 configure.ac:310: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:310: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:310: the top level
+#11 75.12 configure.ac:311: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:311: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:311: the top level
+#11 75.12 configure.ac:312: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:312: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:312: the top level
+#11 75.12 configure.ac:313: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:313: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:313: the top level
+#11 75.12 configure.ac:314: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:314: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:314: the top level
+#11 75.12 configure.ac:315: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.12 configure.ac:315: You should run autoupdate.
+#11 75.12 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.12 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.12 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.12 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.12 configure.ac:315: the top level
+#11 75.13 configure.ac:316: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:316: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:316: the top level
+#11 75.13 configure.ac:317: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:317: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:317: the top level
+#11 75.13 configure.ac:318: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:318: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:318: the top level
+#11 75.13 configure.ac:319: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:319: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:319: the top level
+#11 75.13 configure.ac:320: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:320: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:320: the top level
+#11 75.13 configure.ac:321: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:321: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:321: the top level
+#11 75.13 configure.ac:322: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:322: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:322: the top level
+#11 75.13 configure.ac:323: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:323: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:323: the top level
+#11 75.13 configure.ac:324: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:324: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:324: the top level
+#11 75.13 configure.ac:325: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:325: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:325: the top level
+#11 75.13 configure.ac:326: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:326: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:326: the top level
+#11 75.13 configure.ac:327: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:327: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:327: the top level
+#11 75.13 configure.ac:328: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:328: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:328: the top level
+#11 75.13 configure.ac:329: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:329: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:329: the top level
+#11 75.13 configure.ac:330: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:330: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:330: the top level
+#11 75.13 configure.ac:331: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:331: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:331: the top level
+#11 75.13 configure.ac:332: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:332: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:332: the top level
+#11 75.13 configure.ac:333: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:333: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:333: the top level
+#11 75.13 configure.ac:334: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:334: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:334: the top level
+#11 75.13 configure.ac:335: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:335: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 configure.ac:335: the top level
+#11 75.13 configure.ac:344: warning: The macro `AC_TRY_COMPILE' is obsolete.
+#11 75.13 configure.ac:344: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:594: AS_CASE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 m4/ax_tls.m4:49: AX_TLS is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 configure.ac:344: the top level
+#11 75.13 configure.ac:344: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:344: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 m4/ax_tls.m4:49: AX_TLS is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 configure.ac:344: the top level
+#11 75.13 configure.ac:358: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:358: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 configure.ac:358: the top level
+#11 75.13 configure.ac:358: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:358: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2823: _AC_COMPILE_IFELSE is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2839: AC_COMPILE_IFELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 configure.ac:358: the top level
+#11 75.13 configure.ac:358: warning: The macro `AC_TRY_LINK' is obsolete.
+#11 75.13 configure.ac:358: You should run autoupdate.
+#11 75.13 ./lib/autoconf/general.m4:2920: AC_TRY_LINK is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+#11 75.13 m4/ax_check_compile_flag.m4:60: AX_CHECK_COMPILE_FLAG is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2823: _AC_COMPILE_IFELSE is expanded from...
+#11 75.13 ./lib/autoconf/general.m4:2839: AC_COMPILE_IFELSE is expanded from...
+#11 75.13 lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+#11 75.13 configure.ac:358: the top level
+#11 75.14 configure.ac:828: warning: The macro `AC_LIBTOOL_WIN32_DLL' is obsolete.
+#11 75.14 configure.ac:828: You should run autoupdate.
+#11 75.14 m4/ltoptions.m4:148: AC_LIBTOOL_WIN32_DLL is expanded from...
+#11 75.14 configure.ac:828: the top level
+#11 75.14 configure.ac:828: warning: AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+#11 75.14 configure.ac:828: put the 'win32-dll' option into LT_INIT's first parameter.
+#11 75.14 ./lib/autoconf/general.m4:2434: AC_DIAGNOSE is expanded from...
+#11 75.14 m4/ltoptions.m4:148: AC_LIBTOOL_WIN32_DLL is expanded from...
+#11 75.14 configure.ac:828: the top level
+#11 75.56 autoreconf: configure.ac: not using Autoheader
+#11 75.56 autoreconf: running: automake --add-missing --copy --force-missing
+#11 77.28 configure.ac:75: installing 'build-aux/compile'
+#11 77.28 configure.ac:9: installing 'build-aux/config.guess'
+#11 77.28 configure.ac:9: installing 'build-aux/config.sub'
+#11 77.28 configure.ac:10: installing 'build-aux/install-sh'
+#11 77.28 configure.ac:10: installing 'build-aux/missing'
+#11 77.59 src/libsodium/Makefile.am: installing 'build-aux/depcomp'
+#11 78.17 parallel-tests: installing 'build-aux/test-driver'
+#11 78.28 autoreconf: Leaving directory '.'
+#11 78.36 checking build system type... x86_64-pc-linux-musl
+#11 78.42 checking host system type... x86_64-pc-linux-musl
+#11 78.42 checking for a BSD-compatible install... /usr/bin/install -c
+#11 78.68 checking whether build environment is sane... yes
+#11 78.69 checking for a race-free mkdir -p... ./build-aux/install-sh -c -d
+#11 78.70 checking for gawk... no
+#11 78.70 checking for mawk... no
+#11 78.70 checking for nawk... no
+#11 78.70 checking for awk... awk
+#11 78.70 checking whether make sets $(MAKE)... yes
+#11 78.71 checking whether make supports nested variables... yes
+#11 78.72 checking whether UID '0' is supported by ustar format... yes
+#11 78.72 checking whether GID '0' is supported by ustar format... yes
+#11 78.72 checking how to create a ustar tar archive... none
+#11 78.75 checking whether make supports nested variables... (cached) yes
+#11 78.75 checking whether to enable maintainer-specific portions of Makefiles... no
+#11 78.75 checking whether make supports the include directive... yes (GNU style)
+#11 78.76 checking for gcc... gcc
+#11 78.80 checking whether the C compiler works... yes
+#11 78.84 checking for C compiler default output file name... a.out
+#11 78.85 checking for suffix of executables... 
+#11 78.89 checking whether we are cross compiling... no
+#11 78.94 checking for suffix of object files... o
+#11 78.97 checking whether the compiler supports GNU C... yes
+#11 79.00 checking whether gcc accepts -g... yes
+#11 79.03 checking for gcc option to enable C11 features... none needed
+#11 79.13 checking whether gcc understands -c and -o together... yes
+#11 79.19 checking dependency style of gcc... gcc3
+#11 79.23 checking for a sed that does not truncate output... /bin/sed
+#11 79.23 checking how to run the C preprocessor... gcc -E
+#11 79.31 checking for grep that handles long lines and -e... /bin/grep
+#11 79.37 checking for egrep... /bin/grep -E
+#11 79.37 checking whether gcc is Clang... no
+#11 79.38 checking whether pthreads work with -pthread... yes
+#11 79.45 checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+#11 79.51 checking whether more special flags are required for pthreads... no
+#11 79.51 checking for PTHREAD_PRIO_INHERIT... yes
+#11 79.56 checking dependency style of gcc... gcc3
+#11 79.61 checking for stdio.h... yes
+#11 79.63 checking for stdlib.h... yes
+#11 79.66 checking for string.h... yes
+#11 79.69 checking for inttypes.h... yes
+#11 79.73 checking for stdint.h... yes
+#11 79.76 checking for strings.h... yes
+#11 79.79 checking for sys/stat.h... yes
+#11 79.83 checking for sys/types.h... yes
+#11 79.86 checking for unistd.h... yes
+#11 79.90 checking for wchar.h... yes
+#11 79.94 checking for minix/config.h... no
+#11 79.97 checking whether it is safe to define __EXTENSIONS__... yes
+#11 80.03 checking whether _XOPEN_SOURCE should be defined... no
+#11 80.07 checking for variable-length arrays... yes
+#11 80.13 checking for __native_client__ defined... no
+#11 80.15 checking for _FORTIFY_SOURCE defined... yes
+#11 80.18 checking whether C compiler accepts -fvisibility=hidden... yes
+#11 80.24 checking whether C compiler accepts -fPIC... yes
+#11 80.29 checking whether C compiler accepts -fPIE... yes
+#11 80.35 checking whether the linker accepts -pie... yes
+#11 80.41 checking whether C compiler accepts -fno-strict-aliasing... yes
+#11 80.46 checking whether C compiler accepts -fno-strict-overflow... yes
+#11 80.56 checking whether C compiler accepts -fstack-protector... yes
+#11 80.61 checking whether the linker accepts -fstack-protector... yes
+#11 80.67 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wall... yes
+#11 80.72 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra... yes
+#11 80.78 checking for clang... no
+#11 80.80 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast... yes
+#11 80.86 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual... yes
+#11 80.92 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero... yes
+#11 80.98 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches... yes
+#11 81.04 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond... yes
+#11 81.11 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal... yes
+#11 81.17 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2... yes
+#11 81.23 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op... yes
+#11 81.28 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized... yes
+#11 81.34 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation... yes
+#11 81.40 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations... yes
+#11 81.46 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes... yes
+#11 81.52 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs... yes
+#11 81.58 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits... yes
+#11 81.63 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas... yes
+#11 81.69 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id... yes
+#11 81.75 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference... yes
+#11 81.81 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration... yes
+#11 81.87 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith... yes
+#11 81.92 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls... yes
+#11 81.98 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict... yes
+#11 82.05 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wshorten-64-to-32... no
+#11 82.08 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wsometimes-uninitialized... no
+#11 82.11 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wstrict-prototypes... yes
+#11 82.16 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wstrict-prototypes -Wswitch-enum... yes
+#11 82.22 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wstrict-prototypes -Wswitch-enum -Wvariable-decl... no
+#11 82.25 checking whether C compiler accepts -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wstrict-prototypes -Wswitch-enum -Wwrite-strings... yes
+#11 82.30 checking whether the linker accepts -Wl,-z,relro... yes
+#11 82.36 checking whether the linker accepts -Wl,-z,now... yes
+#11 82.41 checking whether the linker accepts -Wl,-z,noexecstack... yes
+#11 82.47 checking whether segmentation violations can be caught when using the C compiler... yes
+#11 82.54 checking whether SIGABRT can be caught when using the C compiler... no
+#11 82.60 configure: WARNING: On this platform, SIGABRT cannot be caught using signal handlers.
+#11 82.60 checking for thread local storage (TLS) class... _Thread_local
+#11 82.66 thread local storage is supported
+#11 82.66 checking whether C compiler accepts -ftls-model=local-dynamic... yes
+#11 82.72 checking how to print strings... printf
+#11 82.72 checking for a sed that does not truncate output... (cached) /bin/sed
+#11 82.72 checking for fgrep... /bin/grep -F
+#11 82.73 checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+#11 82.74 checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+#11 82.74 checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+#11 82.75 checking the name lister (/usr/bin/nm -B) interface... BSD nm
+#11 82.78 checking whether ln -s works... yes
+#11 82.78 checking the maximum length of command line arguments... 98304
+#11 82.79 checking how to convert x86_64-pc-linux-musl file names to x86_64-pc-linux-musl format... func_convert_file_noop
+#11 82.79 checking how to convert x86_64-pc-linux-musl file names to toolchain format... func_convert_file_noop
+#11 82.79 checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+#11 82.79 checking for objdump... objdump
+#11 82.79 checking how to recognize dependent libraries... pass_all
+#11 82.79 checking for dlltool... no
+#11 82.79 checking how to associate runtime and link libraries... printf %s\n
+#11 82.80 checking for ar... ar
+#11 82.80 checking for archiver @FILE support... @
+#11 82.84 checking for strip... strip
+#11 82.84 checking for ranlib... ranlib
+#11 82.84 checking command to parse /usr/bin/nm -B output from gcc object... ok
+#11 82.93 checking for sysroot... no
+#11 82.93 checking for a working dd... /bin/dd
+#11 82.94 checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+#11 82.96 ./configure: line 1: /usr/bin/file: not found
+#11 82.96 checking for mt... no
+#11 82.96 checking if : is a manifest tool... no
+#11 82.97 checking for dlfcn.h... yes
+#11 83.01 checking for objdir... .libs
+#11 83.09 checking if gcc supports -fno-rtti -fno-exceptions... no
+#11 83.12 checking for gcc option to produce PIC... -fPIC -DPIC
+#11 83.12 checking if gcc PIC flag -fPIC -DPIC works... yes
+#11 83.15 checking if gcc static flag -static works... yes
+#11 83.20 checking if gcc supports -c -o file.o... yes
+#11 83.23 checking if gcc supports -c -o file.o... (cached) yes
+#11 83.23 checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+#11 83.25 checking dynamic linker characteristics... GNU/Linux ld.so
+#11 83.31 checking how to hardcode library paths into programs... immediate
+#11 83.31 checking whether stripping libraries is possible... yes
+#11 83.31 checking if libtool supports shared libraries... yes
+#11 83.31 checking whether to build shared libraries... no
+#11 83.31 checking whether to build static libraries... yes
+#11 83.32 checking for ar... (cached) ar
+#11 83.32 checking whether C compiler accepts -mmmx... yes
+#11 83.37 checking for MMX instructions set... yes
+#11 83.41 checking whether C compiler accepts -mmmx... (cached) yes
+#11 83.41 checking whether C compiler accepts -msse2... yes
+#11 83.47 checking for SSE2 instructions set... yes
+#11 83.53 checking whether C compiler accepts -msse2... (cached) yes
+#11 83.53 checking whether C compiler accepts -msse3... yes
+#11 83.59 checking for SSE3 instructions set... yes
+#11 83.66 checking whether C compiler accepts -msse3... (cached) yes
+#11 83.66 checking whether C compiler accepts -mssse3... yes
+#11 83.71 checking for SSSE3 instructions set... yes
+#11 83.78 checking whether C compiler accepts -mssse3... (cached) yes
+#11 83.78 checking whether C compiler accepts -msse4.1... yes
+#11 83.83 checking for SSE4.1 instructions set... yes
+#11 83.90 checking whether C compiler accepts -msse4.1... (cached) yes
+#11 83.90 checking whether C compiler accepts -mavx... yes
+#11 83.96 checking for AVX instructions set... yes
+#11 84.53 checking whether C compiler accepts -mavx... (cached) yes
+#11 84.53 checking whether C compiler accepts -mavx2... yes
+#11 84.58 checking for AVX2 instructions set... yes
+#11 85.09 checking whether C compiler accepts -mavx2... (cached) yes
+#11 85.09 checking if _mm256_broadcastsi128_si256 is correctly defined... yes
+#11 85.60 checking whether C compiler accepts -mavx512f... yes
+#11 85.65 checking for AVX512F instructions set... yes
+#11 86.12 checking whether C compiler accepts -mavx512f... (cached) yes
+#11 86.12 checking whether C compiler accepts -maes... yes
+#11 86.18 checking whether C compiler accepts -mpclmul... yes
+#11 86.23 checking for AESNI instructions set and PCLMULQDQ... yes
+#11 86.30 checking whether C compiler accepts -maes... (cached) yes
+#11 86.30 checking whether C compiler accepts -mpclmul... (cached) yes
+#11 86.30 checking whether C compiler accepts -mrdrnd... yes
+#11 86.35 checking for RDRAND... yes
+#11 86.86 checking whether C compiler accepts -mrdrnd... (cached) yes
+#11 86.87 checking for sys/mman.h... yes
+#11 86.90 checking for intrin.h... no
+#11 86.94 checking if _xgetbv() is available... no
+#11 86.96 checking for inline... inline
+#11 86.99 checking whether byte ordering is bigendian... (cached) no
+#11 86.99 checking whether __STDC_LIMIT_MACROS is required... no
+#11 87.03 checking whether we can use inline asm code... yes
+#11 87.08 no
+#11 87.08 checking whether we can use x86_64 asm code... yes
+#11 87.12 checking whether we can assemble AVX opcodes... yes
+#11 87.15 checking for 128-bit arithmetic... yes
+#11 87.20 checking for cpuid instruction... yes
+#11 87.23 checking if the .private_extern asm directive is supported... no
+#11 87.27 checking if the .hidden asm directive is supported... yes
+#11 87.32 checking if weak symbols are supported... yes
+#11 87.38 checking if data alignment is required... no
+#11 87.38 checking if atomic operations are supported... yes
+#11 87.43 checking for size_t... yes
+#11 87.52 checking for working alloca.h... yes
+#11 87.57 checking for alloca... yes
+#11 87.57 checking for arc4random... no
+#11 87.63 checking for arc4random_buf... no
+#11 87.68 checking for mmap... yes
+#11 87.74 checking for mlock... yes
+#11 87.79 checking for madvise... yes
+#11 87.84 checking for mprotect... yes
+#11 87.89 checking for memset_s... no
+#11 87.95 checking for explicit_bzero... yes
+#11 88.00 checking for explicit_memset... no
+#11 88.06 checking for nanosleep... yes
+#11 88.11 checking for posix_memalign... yes
+#11 88.17 checking for getpid... yes
+#11 88.22 checking if gcc/ld supports -Wl,--output-def... not needed, shared libraries are disabled
+#11 88.27 checking that generated files are newer than configure... done
+#11 88.27 configure: creating ./config.status
+#11 88.63 config.status: creating Makefile
+#11 88.65 config.status: creating builds/Makefile
+#11 88.68 config.status: creating contrib/Makefile
+#11 88.70 config.status: creating dist-build/Makefile
+#11 88.73 config.status: creating libsodium.pc
+#11 88.74 config.status: creating libsodium-uninstalled.pc
+#11 88.75 config.status: creating msvc-scripts/Makefile
+#11 88.77 config.status: creating src/Makefile
+#11 88.80 config.status: creating src/libsodium/Makefile
+#11 88.92 config.status: creating src/libsodium/include/Makefile
+#11 88.94 config.status: creating src/libsodium/include/sodium/version.h
+#11 88.96 config.status: creating test/default/Makefile
+#11 89.03 config.status: creating test/Makefile
+#11 89.05 config.status: executing depfiles commands
+#11 90.25 config.status: executing libtool commands
+#11 90.33 make[2]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 90.33 Making all in builds
+#11 90.33 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 90.33 make[3]: Nothing to be done for 'all'.
+#11 90.33 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 90.33 Making all in contrib
+#11 90.34 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 90.34 make[3]: Nothing to be done for 'all'.
+#11 90.34 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 90.34 Making all in dist-build
+#11 90.34 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 90.34 make[3]: Nothing to be done for 'all'.
+#11 90.34 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 90.34 Making all in msvc-scripts
+#11 90.34 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 90.34 make[3]: Nothing to be done for 'all'.
+#11 90.34 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 90.34 Making all in src
+#11 90.35 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 90.35 Making all in libsodium
+#11 90.36 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 90.37 Making all in include
+#11 90.37 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 90.37 make[5]: Nothing to be done for 'all'.
+#11 90.37 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 90.39 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 90.39   CC       crypto_aead/chacha20poly1305/sodium/libsodium_la-aead_chacha20poly1305.lo
+#11 90.98   CC       crypto_aead/xchacha20poly1305/sodium/libsodium_la-aead_xchacha20poly1305.lo
+#11 91.55   CC       crypto_auth/libsodium_la-crypto_auth.lo
+#11 92.02   CC       crypto_auth/hmacsha256/libsodium_la-auth_hmacsha256.lo
+#11 92.53   CC       crypto_auth/hmacsha512/libsodium_la-auth_hmacsha512.lo
+#11 93.05   CC       crypto_auth/hmacsha512256/libsodium_la-auth_hmacsha512256.lo
+#11 93.54   CC       crypto_box/libsodium_la-crypto_box.lo
+#11 94.01   CC       crypto_box/libsodium_la-crypto_box_easy.lo
+#11 94.52   CC       crypto_box/libsodium_la-crypto_box_seal.lo
+#11 95.01   CC       crypto_box/curve25519xsalsa20poly1305/libsodium_la-box_curve25519xsalsa20poly1305.lo
+#11 95.54   CC       crypto_core/ed25519/ref10/libsodium_la-ed25519_ref10.lo
+#11 98.30   CC       crypto_core/hchacha20/libsodium_la-core_hchacha20.lo
+#11 98.82   CC       crypto_core/hsalsa20/ref2/libsodium_la-core_hsalsa20_ref2.lo
+#11 99.32   CC       crypto_core/hsalsa20/libsodium_la-core_hsalsa20.lo
+#11 99.77   CC       crypto_core/salsa/ref/libsodium_la-core_salsa_ref.lo
+#11 100.3   CC       crypto_generichash/libsodium_la-crypto_generichash.lo
+#11 100.8   CC       crypto_generichash/blake2b/libsodium_la-generichash_blake2.lo
+#11 101.3   CC       crypto_generichash/blake2b/ref/libsodium_la-blake2b-compress-ref.lo
+#11 102.3   CC       crypto_generichash/blake2b/ref/libsodium_la-blake2b-ref.lo
+#11 102.9   CC       crypto_generichash/blake2b/ref/libsodium_la-generichash_blake2b.lo
+#11 103.4   CC       crypto_hash/libsodium_la-crypto_hash.lo
+#11 103.8   CC       crypto_hash/sha256/libsodium_la-hash_sha256.lo
+#11 104.3   CC       crypto_hash/sha256/cp/libsodium_la-hash_sha256_cp.lo
+#11 105.1   CC       crypto_hash/sha512/libsodium_la-hash_sha512.lo
+#11 105.6   CC       crypto_hash/sha512/cp/libsodium_la-hash_sha512_cp.lo
+#11 106.4   CC       crypto_kdf/blake2b/libsodium_la-kdf_blake2b.lo
+#11 106.9   CC       crypto_kdf/libsodium_la-crypto_kdf.lo
+#11 107.4   CC       crypto_kx/libsodium_la-crypto_kx.lo
+#11 107.9   CC       crypto_onetimeauth/libsodium_la-crypto_onetimeauth.lo
+#11 108.4   CC       crypto_onetimeauth/poly1305/libsodium_la-onetimeauth_poly1305.lo
+#11 108.8   CC       crypto_onetimeauth/poly1305/donna/libsodium_la-poly1305_donna.lo
+#11 109.4   CC       crypto_pwhash/argon2/libsodium_la-argon2-core.lo
+#11 110.0   CC       crypto_pwhash/argon2/libsodium_la-argon2-encoding.lo
+#11 110.6   CC       crypto_pwhash/argon2/libsodium_la-argon2-fill-block-ref.lo
+#11 111.7   CC       crypto_pwhash/argon2/libsodium_la-argon2.lo
+#11 112.3   CC       crypto_pwhash/argon2/libsodium_la-blake2b-long.lo
+#11 112.8   CC       crypto_pwhash/argon2/libsodium_la-pwhash_argon2i.lo
+#11 113.3   CC       crypto_pwhash/argon2/libsodium_la-pwhash_argon2id.lo
+#11 113.8   CC       crypto_pwhash/libsodium_la-crypto_pwhash.lo
+#11 114.4   CC       crypto_scalarmult/libsodium_la-crypto_scalarmult.lo
+#11 114.8   CC       crypto_scalarmult/curve25519/ref10/libsodium_la-x25519_ref10.lo
+#11 115.5   CC       crypto_scalarmult/curve25519/libsodium_la-scalarmult_curve25519.lo
+#11 115.9   CC       crypto_secretbox/libsodium_la-crypto_secretbox.lo
+#11 116.4   CC       crypto_secretbox/libsodium_la-crypto_secretbox_easy.lo
+#11 117.0   CC       crypto_secretbox/xsalsa20poly1305/libsodium_la-secretbox_xsalsa20poly1305.lo
+#11 117.4   CC       crypto_secretstream/xchacha20poly1305/libsodium_la-secretstream_xchacha20poly1305.lo
+#11 118.0   CC       crypto_shorthash/libsodium_la-crypto_shorthash.lo
+#11 118.5   CC       crypto_shorthash/siphash24/libsodium_la-shorthash_siphash24.lo
+#11 118.9   CC       crypto_shorthash/siphash24/ref/libsodium_la-shorthash_siphash24_ref.lo
+#11 119.5   CC       crypto_sign/libsodium_la-crypto_sign.lo
+#11 119.9   CC       crypto_sign/ed25519/libsodium_la-sign_ed25519.lo
+#11 120.4   CC       crypto_sign/ed25519/ref10/libsodium_la-keypair.lo
+#11 121.0   CC       crypto_sign/ed25519/ref10/libsodium_la-open.lo
+#11 121.5   CC       crypto_sign/ed25519/ref10/libsodium_la-open_bv_compat.lo
+#11 122.0   CC       crypto_sign/ed25519/ref10/libsodium_la-batch.lo
+#11 122.9   CC       crypto_sign/ed25519/ref10/libsodium_la-sign.lo
+#11 123.4   CC       crypto_stream/chacha20/libsodium_la-stream_chacha20.lo
+#11 123.9   CC       crypto_stream/chacha20/ref/libsodium_la-chacha20_ref.lo
+#11 124.6   CC       crypto_stream/libsodium_la-crypto_stream.lo
+#11 125.0   CC       crypto_stream/salsa20/libsodium_la-stream_salsa20.lo
+#11 125.5   CC       crypto_stream/xsalsa20/libsodium_la-stream_xsalsa20.lo
+#11 126.0   CC       crypto_verify/sodium/libsodium_la-verify.lo
+#11 126.5   CC       crypto_vrf/libsodium_la-crypto_vrf.lo
+#11 127.0   CC       crypto_vrf/ietfdraft03/libsodium_la-keypair.lo
+#11 127.5   CC       crypto_vrf/ietfdraft03/libsodium_la-convert.lo
+#11 128.0   CC       crypto_vrf/ietfdraft03/libsodium_la-prove.lo
+#11 128.5   CC       crypto_vrf/ietfdraft03/libsodium_la-verify.lo
+#11 129.0   CC       crypto_vrf/ietfdraft03/libsodium_la-vrf.lo
+#11 129.4   CC       randombytes/libsodium_la-randombytes.lo
+#11 129.9   CC       sodium/libsodium_la-codecs.lo
+#11 130.6   CC       sodium/libsodium_la-core.lo
+#11 131.1   CC       sodium/libsodium_la-runtime.lo
+#11 131.6   CC       sodium/libsodium_la-utils.lo
+#11 132.3   CC       sodium/libsodium_la-version.lo
+#11 132.7   CPPAS    crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6-asm.lo
+#11 133.1   CC       crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6.lo
+#11 133.6   CC       crypto_scalarmult/curve25519/sandy2x/libsodium_la-curve25519_sandy2x.lo
+#11 134.0   CC       crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe51_invert.lo
+#11 134.5   CC       crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe_frombytes_sandy2x.lo
+#11 135.0   CPPAS    crypto_scalarmult/curve25519/sandy2x/libsodium_la-sandy2x.lo
+#11 135.4   CC       crypto_box/curve25519xchacha20poly1305/libsodium_la-box_curve25519xchacha20poly1305.lo
+#11 136.0   CC       crypto_box/curve25519xchacha20poly1305/libsodium_la-box_seal_curve25519xchacha20poly1305.lo
+#11 136.5   CC       crypto_core/ed25519/libsodium_la-core_ed25519.lo
+#11 137.1   CC       crypto_pwhash/scryptsalsa208sha256/libsodium_la-crypto_scrypt-common.lo
+#11 137.6   CC       crypto_pwhash/scryptsalsa208sha256/libsodium_la-scrypt_platform.lo
+#11 138.1   CC       crypto_pwhash/scryptsalsa208sha256/libsodium_la-pbkdf2-sha256.lo
+#11 138.6   CC       crypto_pwhash/scryptsalsa208sha256/libsodium_la-pwhash_scryptsalsa208sha256.lo
+#11 139.2   CC       crypto_pwhash/scryptsalsa208sha256/nosse/libsodium_la-pwhash_scryptsalsa208sha256_nosse.lo
+#11 139.8   CC       crypto_scalarmult/ed25519/ref10/libsodium_la-scalarmult_ed25519_ref10.lo
+#11 140.3   CC       crypto_secretbox/xchacha20poly1305/libsodium_la-secretbox_xchacha20poly1305.lo
+#11 140.9   CC       crypto_shorthash/siphash24/libsodium_la-shorthash_siphashx24.lo
+#11 141.3   CC       crypto_shorthash/siphash24/ref/libsodium_la-shorthash_siphashx24_ref.lo
+#11 141.9   CC       crypto_sign/ed25519/ref10/libsodium_la-obsolete.lo
+#11 142.4   CC       crypto_stream/salsa2012/ref/libsodium_la-stream_salsa2012_ref.lo
+#11 142.9   CC       crypto_stream/salsa2012/libsodium_la-stream_salsa2012.lo
+#11 143.3   CC       crypto_stream/salsa208/ref/libsodium_la-stream_salsa208_ref.lo
+#11 143.9   CC       crypto_stream/salsa208/libsodium_la-stream_salsa208.lo
+#11 144.3   CC       crypto_stream/xchacha20/libsodium_la-stream_xchacha20.lo
+#11 144.8   CC       randombytes/sysrandom/libsodium_la-randombytes_sysrandom.lo
+#11 145.3   CC       crypto_aead/aes256gcm/aesni/libaesni_la-aead_aes256gcm_aesni.lo
+#11 147.0   CCLD     libaesni.la
+#11 147.0 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 147.1 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 147.1   CC       crypto_onetimeauth/poly1305/sse2/libsse2_la-poly1305_sse2.lo
+#11 148.0   CC       crypto_pwhash/scryptsalsa208sha256/sse/libsse2_la-pwhash_scryptsalsa208sha256_sse.lo
+#11 149.4   CCLD     libsse2.la
+#11 149.5 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 149.5 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 149.5   CC       crypto_generichash/blake2b/ref/libssse3_la-blake2b-compress-ssse3.lo
+#11 150.5   CC       crypto_pwhash/argon2/libssse3_la-argon2-fill-block-ssse3.lo
+#11 151.6   CC       crypto_stream/chacha20/dolbeau/libssse3_la-chacha20_dolbeau-ssse3.lo
+#11 152.5   CCLD     libssse3.la
+#11 152.5 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 152.6 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 152.6   CC       crypto_generichash/blake2b/ref/libsse41_la-blake2b-compress-sse41.lo
+#11 153.6   CCLD     libsse41.la
+#11 153.7 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 153.7 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 153.7   CC       crypto_generichash/blake2b/ref/libavx2_la-blake2b-compress-avx2.lo
+#11 155.1   CC       crypto_pwhash/argon2/libavx2_la-argon2-fill-block-avx2.lo
+#11 156.6   CC       crypto_stream/chacha20/dolbeau/libavx2_la-chacha20_dolbeau-avx2.lo
+#11 158.1   CC       crypto_stream/salsa20/xmm6int/libavx2_la-salsa20_xmm6int-avx2.lo
+#11 159.7   CCLD     libavx2.la
+#11 159.8 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 159.8 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 159.8   CC       crypto_pwhash/argon2/libavx512f_la-argon2-fill-block-avx512f.lo
+#11 161.4   CCLD     libavx512f.la
+#11 161.5 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 161.5 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 161.5   CC       randombytes/salsa20/librdrand_la-randombytes_salsa20_random.lo
+#11 162.7   CCLD     librdrand.la
+#11 162.7 libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+#11 162.7 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 162.7   CCLD     libsodium.la
+#11 163.8 copying selected object files to avoid basename conflicts...
+#11 164.0 ar: `u' modifier ignored since `D' is the default (see `U')
+#11 164.1 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.1 make[4]: Nothing to be done for 'all-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.1 Making all in test
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.1 Making all in default
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.1 make[4]: Nothing to be done for 'all'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.1 make[4]: Nothing to be done for 'all-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.1 make[3]: Nothing to be done for 'all-am'.
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.1 make[2]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.1 make[2]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.1 Making install in builds
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 164.1 make[4]: Nothing to be done for 'install-exec-am'.
+#11 164.1 make[4]: Nothing to be done for 'install-data-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/builds'
+#11 164.1 Making install in contrib
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 164.1 make[4]: Nothing to be done for 'install-exec-am'.
+#11 164.1 make[4]: Nothing to be done for 'install-data-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/contrib'
+#11 164.1 Making install in dist-build
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 164.1 make[4]: Nothing to be done for 'install-exec-am'.
+#11 164.1 make[4]: Nothing to be done for 'install-data-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/dist-build'
+#11 164.1 Making install in msvc-scripts
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 164.1 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 164.1 make[4]: Nothing to be done for 'install-exec-am'.
+#11 164.1 make[4]: Nothing to be done for 'install-data-am'.
+#11 164.1 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 164.1 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/msvc-scripts'
+#11 164.1 Making install in src
+#11 164.1 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.1 Making install in libsodium
+#11 164.2 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.2 Making install in include
+#11 164.2 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 164.2 make[6]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 164.2 make[6]: Nothing to be done for 'install-exec-am'.
+#11 164.2  ../../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include'
+#11 164.2  ../../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2  /usr/bin/install -c -m 644  sodium/core.h sodium/crypto_aead_aes256gcm.h sodium/crypto_aead_chacha20poly1305.h sodium/crypto_aead_xchacha20poly1305.h sodium/crypto_auth.h sodium/crypto_auth_hmacsha256.h sodium/crypto_auth_hmacsha512.h sodium/crypto_auth_hmacsha512256.h sodium/crypto_box.h sodium/crypto_box_curve25519xchacha20poly1305.h sodium/crypto_box_curve25519xsalsa20poly1305.h sodium/crypto_core_ed25519.h sodium/crypto_core_hchacha20.h sodium/crypto_core_hsalsa20.h sodium/crypto_core_salsa20.h sodium/crypto_core_salsa2012.h sodium/crypto_core_salsa208.h sodium/crypto_generichash.h sodium/crypto_generichash_blake2b.h sodium/crypto_hash.h sodium/crypto_hash_sha256.h sodium/crypto_hash_sha512.h sodium/crypto_kdf.h sodium/crypto_kdf_blake2b.h sodium/crypto_kx.h sodium/crypto_onetimeauth.h sodium/crypto_onetimeauth_poly1305.h sodium/crypto_pwhash.h sodium/crypto_pwhash_argon2i.h sodium/crypto_pwhash_argon2id.h sodium/crypto_pwhash_scryptsalsa208sha256.h sodium/crypto_scalarmult.h sodium/crypto_scalarmult_curve25519.h sodium/crypto_scalarmult_ed25519.h sodium/crypto_secretbox.h sodium/crypto_secretbox_xchacha20poly1305.h sodium/crypto_secretbox_xsalsa20poly1305.h sodium/crypto_secretstream_xchacha20poly1305.h sodium/crypto_shorthash.h sodium/crypto_shorthash_siphash24.h '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2  /usr/bin/install -c -m 644  sodium.h '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/.'
+#11 164.2  ../../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2  /usr/bin/install -c -m 644  sodium/crypto_sign.h sodium/crypto_sign_ed25519.h sodium/crypto_sign_edwards25519sha512batch.h sodium/crypto_stream.h sodium/crypto_stream_chacha20.h sodium/crypto_stream_salsa20.h sodium/crypto_stream_salsa2012.h sodium/crypto_stream_salsa208.h sodium/crypto_stream_xchacha20.h sodium/crypto_stream_xsalsa20.h sodium/crypto_verify_16.h sodium/crypto_verify_32.h sodium/crypto_verify_64.h sodium/crypto_vrf.h sodium/crypto_vrf_ietfdraft03.h sodium/export.h sodium/randombytes.h sodium/randombytes_salsa20_random.h sodium/randombytes_sysrandom.h sodium/runtime.h sodium/utils.h '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2  ../../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include'
+#11 164.2  ../../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2  /usr/bin/install -c -m 644  sodium/version.h '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/include/sodium'
+#11 164.2 make[6]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 164.2 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium/include'
+#11 164.3 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.3 make[6]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.4  ../.././build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib'
+#11 164.4  /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libsodium.la '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib'
+#11 164.4 libtool: install: /usr/bin/install -c .libs/libsodium.lai /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/libsodium.la
+#11 164.4 libtool: install: /usr/bin/install -c .libs/libsodium.a /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/libsodium.a
+#11 164.4 libtool: install: chmod 644 /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/libsodium.a
+#11 164.4 libtool: install: ranlib /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/libsodium.a
+#11 164.5 libtool: finish: PATH="/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib
+#11 164.5 ----------------------------------------------------------------------
+#11 164.5 Libraries have been installed in:
+#11 164.5    /opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib
+#11 164.5 
+#11 164.5 If you ever happen to want to link against installed libraries
+#11 164.5 in a given directory, LIBDIR, you must either use libtool, and
+#11 164.5 specify the full pathname of the library, or use the '-LLIBDIR'
+#11 164.5 flag during linking and do at least one of the following:
+#11 164.5    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+#11 164.5      during execution
+#11 164.5    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+#11 164.5      during linking
+#11 164.5    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+#11 164.5 
+#11 164.5 See any operating system documentation about shared libraries for
+#11 164.5 more information, such as the ld(1) and ld.so(8) manual pages.
+#11 164.5 ----------------------------------------------------------------------
+#11 164.5 make[6]: Nothing to be done for 'install-data-am'.
+#11 164.5 make[6]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.5 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.5 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src/libsodium'
+#11 164.5 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.5 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.5 make[5]: Nothing to be done for 'install-exec-am'.
+#11 164.5 make[5]: Nothing to be done for 'install-data-am'.
+#11 164.5 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.5 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.5 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/src'
+#11 164.5 Making install in test
+#11 164.5 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 Making install in default
+#11 164.5 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.5 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.5 make[5]: Nothing to be done for 'install-exec-am'.
+#11 164.5 make[5]: Nothing to be done for 'install-data-am'.
+#11 164.5 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.5 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test/default'
+#11 164.5 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 make[5]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 make[5]: Nothing to be done for 'install-exec-am'.
+#11 164.5 make[5]: Nothing to be done for 'install-data-am'.
+#11 164.5 make[5]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork/test'
+#11 164.5 make[3]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.5 make[4]: Entering directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.5 make[4]: Nothing to be done for 'install-exec-am'.
+#11 164.5  ./build-aux/install-sh -c -d '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/pkgconfig'
+#11 164.6  /usr/bin/install -c -m 644 libsodium.pc '/opt/indexer/third_party/go-algorand/crypto/libs/linux/amd64/lib/pkgconfig'
+#11 164.6 make[4]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.6 make[3]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.6 make[2]: Leaving directory '/opt/indexer/third_party/go-algorand/crypto/copies/linux/amd64/libsodium-fork'
+#11 164.6 make[1]: Leaving directory '/opt/indexer/third_party/go-algorand'
+#11 164.7 cd cmd/algorand-indexer && go build -ldflags="-X github.com/algorand/indexer/version.Hash=1c79c90ed66c3455f22ea26a903f0ee589dc6e24 -X github.com/algorand/indexer/version.Dirty=true -X github.com/algorand/indexer/version.CompileTime=2023-04-05T14:54:59+0000 -X github.com/algorand/indexer/version.GitDecorateBase64=SEVBRCAtPiBtYXN0ZXIsIG9yaWdpbi9tYXN0ZXIK -X github.com/algorand/indexer/version.ReleaseVersion=2.15.3"
+#11 164.8 go: downloading github.com/aws/aws-sdk-go v1.30.19
+#11 170.0 go: downloading github.com/miekg/dns v1.1.41
+#11 170.0 go: downloading github.com/jmespath/go-jmespath v0.3.0
+#11 249.8 # github.com/mattn/go-sqlite3
+#11 249.8 sqlite3-binding.c: In function 'sqlite3SelectNew':
+#11 249.8 sqlite3-binding.c:123303:10: warning: function may return address of local variable [-Wreturn-local-addr]
+#11 249.8 123303 |   return pNew;
+#11 249.8        |          ^~~~
+#11 249.8 sqlite3-binding.c:123263:10: note: declared here
+#11 249.8 123263 |   Select standin;
+#11 249.8        |          ^~~~~~~
+#11 DONE 268.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 11.2s done
+#12 writing image sha256:83bf6657652070516a33ebf1bf2403ae84d92fb7d3d05cfd4044254c88212afe done
+#12 naming to docker.io/library/sandbox-indexer done
+#12 DONE 11.3s
+* docker compose up -d
+Network sandbox_default  Creating
+Network sandbox_default  Created
+Container algorand-sandbox-algod  Creating
+Container algorand-sandbox-postgres  Creating
+Container algorand-sandbox-algod  Created
+Container algorand-sandbox-postgres  Created
+Container algorand-sandbox-indexer  Creating
+Container algorand-sandbox-indexer  Created
+Container algorand-sandbox-algod  Starting
+Container algorand-sandbox-postgres  Starting
+Container algorand-sandbox-postgres  Started
+Container algorand-sandbox-algod  Started
+Container algorand-sandbox-indexer  Starting
+Container algorand-sandbox-indexer  Started
+* docker compose down
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopping
+Container algorand-sandbox-indexer  Stopped
+Container algorand-sandbox-indexer  Removing
+Container algorand-sandbox-indexer  Removed
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-postgres  Stopping
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-algod  Stopping
+Container algorand-sandbox-postgres  Stopped
+Container algorand-sandbox-postgres  Removing
+Container algorand-sandbox-postgres  Removed
+Container algorand-sandbox-algod  Stopped
+Container algorand-sandbox-algod  Removing
+Container algorand-sandbox-algod  Removed
+Network sandbox_default  Removing
+Network sandbox_default  Removed
+* docker rmi sandbox_algod sandbox_indexer
+Error: No such image: sandbox_algod
+Error: No such image: sandbox_indexer
+* docker compose rm -f
+No stopped containers
+* docker rmi cfbba82587a2
+0f8cd3bd2c2e
+Deleted: sha256:cfbba82587a20adeef386faff52a4101d8aada43f2142789ade96c535f012fcf
+Deleted: sha256:0f8cd3bd2c2e823b6c068b2f038f62ae1dd7ef992921af4394a58786f0898d85

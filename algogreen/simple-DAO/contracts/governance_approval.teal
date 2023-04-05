@@ -1,0 +1,137 @@
+#pragma version 5
+txn ApplicationID
+int 0
+==
+bnz main_l12
+txn OnCompletion
+int NoOp
+==
+bnz main_l5
+txn OnCompletion
+int OptIn
+==
+txn OnCompletion
+int CloseOut
+==
+||
+txn OnCompletion
+int UpdateApplication
+==
+||
+bnz main_l4
+err
+main_l4:
+int 0
+return
+main_l5:
+txna ApplicationArgs 0
+byte "vote"
+==
+bnz main_l7
+err
+main_l7:
+txn Sender
+byte "token"
+app_global_get
+asset_holding_get AssetBalance
+store 1
+store 0
+load 1
+load 0
+int 0
+>
+&&
+global LatestTimestamp
+byte "voting_end"
+app_global_get
+<
+&&
+global LatestTimestamp
+byte "voting_start"
+app_global_get
+>
+&&
+txna ApplicationArgs 1
+btoi
+int 0
+>=
+&&
+txna ApplicationArgs 1
+btoi
+int 2
+<
+&&
+assert
+txna ApplicationArgs 1
+btoi
+int 0
+==
+bnz main_l11
+txna ApplicationArgs 1
+btoi
+int 1
+==
+bnz main_l10
+main_l9:
+int 1
+return
+main_l10:
+byte "yes"
+byte "yes"
+app_global_get
+int 1
++
+app_global_put
+byte "number_of_votes"
+byte "number_of_votes"
+app_global_get
+int 1
++
+app_global_put
+b main_l9
+main_l11:
+byte "no"
+byte "no"
+app_global_get
+int 1
++
+app_global_put
+byte "number_of_votes"
+byte "number_of_votes"
+app_global_get
+int 1
++
+app_global_put
+b main_l9
+main_l12:
+byte "token"
+txna ApplicationArgs 0
+btoi
+app_global_put
+byte "timelock"
+txna ApplicationArgs 1
+btoi
+app_global_put
+byte "voting_start"
+txna ApplicationArgs 2
+btoi
+app_global_put
+byte "voting_end"
+txna ApplicationArgs 3
+btoi
+app_global_put
+byte "voting_delay"
+txna ApplicationArgs 4
+btoi
+app_global_put
+byte "yes"
+int 0
+app_global_put
+byte "no"
+int 0
+app_global_put
+byte "number_of_votes"
+int 0
+app_global_put
+int 1
+return
