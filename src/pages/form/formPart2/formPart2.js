@@ -12,6 +12,7 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
   const [check, setCheck] = useState(true);
   const [early, setEarly] = useState(true);
   const [vote, setVote] = useState(true);
+  const [quad, setQuad] = useState(true);
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(
@@ -25,6 +26,10 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
     [accountAddress]
   );
 
+  function confirmAction() {
+    let confirmAction = window.confirm("Each Wallet has 25% of voting power. Are you sure you want to continue? Consider airdropping your tokens to your community.");
+  }
+
   const handleChecked = () => {
     setCheck((prev) => !prev);
   };
@@ -35,7 +40,11 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
   const handleVote = () => {
     setVote((prev) => !prev);
   };
+  const handleQuad = () => {
+    setQuad((prev) => !prev);
+  };
   const handleSubmit = () => {
+    confirmAction()
     setSubmitted((prev) => !prev);
   };
 
@@ -361,6 +370,46 @@ const FormPart2 = ({ accountAddress, handleBack }) => {
               onChange={handleVote}
             />
             <label for="voteYes" style={{ fontWeight: 500, paddingLeft: 10 }}>
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="governance">
+        <legend style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Implement Quadratic Funding</legend>
+        <p style={{ opacity: 0.9, marginBottom: 10, width: '65%' }}>
+        This setting means that small contributions from a large number of people can be more valuable than large contributions from a small number of people.
+        </p>
+        <div style={{ display: 'flex' }}>
+          <div
+            className="input2"
+            style={{ background: quad ? '#219D8033' : 'white', accentColor: 'green' }}
+          >
+            <input
+              type="radio"
+              id="quadNo"
+              name="quad"
+              value="quadNo"
+              checked={quad}
+              onChange={handleQuad}
+            />
+            <label for="quadNo" style={{ fontWeight: 500, paddingLeft: 10 }}>
+              No
+            </label>
+          </div>
+          <div
+            className="input2"
+            style={{ background: !quad ? '#219D8033' : 'white', accentColor: 'green' }}
+          >
+            <input
+              type="radio"
+              id="quadYes"
+              name="quad"
+              value="quadYes"
+              checked={!quad}
+              onChange={handleQuad}
+            />
+            <label for="quadYes" style={{ fontWeight: 500, paddingLeft: 10 }}>
               Yes
             </label>
           </div>
