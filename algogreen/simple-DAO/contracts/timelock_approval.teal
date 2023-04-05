@@ -1,0 +1,29 @@
+#pragma version 5
+txn ApplicationID
+int 0
+==
+bnz main_l8
+txn OnCompletion
+int NoOp
+==
+bnz main_l3
+err
+main_l3:
+txna ApplicationArgs 0
+byte "store"
+==
+bnz main_l7
+txna ApplicationArgs 0
+byte "transfer_ownership"
+==
+bnz main_l6
+err
+main_l6:
+int 1
+return
+main_l7:
+int 1
+return
+main_l8:
+int 1
+return
