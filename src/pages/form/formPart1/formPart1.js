@@ -23,7 +23,7 @@ const FormPart1 = ({ handleNext }) => {
         </p>
         <input className="input" placeholder="AlgoGreen" />
       </div>
-      <div className="form-input">
+      <div className="form-input" style={{marginBottom:'40px'}}>
         <p style={{ fontWeight: 600, fontSize: 20, marginBottom: 10 }}>Logo (optional)</p>
         <p style={{ opacity: 0.9, marginBottom: 14 }}>
         JPG, PNG, GIF, or SVG of no more than 3MB. We recommend 1024x1024px.
@@ -31,9 +31,9 @@ const FormPart1 = ({ handleNext }) => {
         <div class="image-upload">
         <label for="file-input">
           <div style={{background:'white',height:'60px',width:'60px',textAlign:'center',borderRadius:'6px',borderStyle:'dotted',opacity:0.5}}>
-    <img src={upload} width='20' height='20' style={{marginTop:'20px'}}/>
-          </div>
-  </label>
+          <img src={upload} width='20' height='20' style={{marginTop:'20px'}}/>
+        </div>
+        </label>
         <input className="input" type='file' id="file-input" style={{paddingLeft:0}}/>
   </div>
       </div>

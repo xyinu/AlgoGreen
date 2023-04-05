@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container className="nav-bar">
-        <Navbar.Brand href="#home" className="nav-bar-title">
+        <Navbar.Brand href="/" className="nav-bar-title">
           <img
             alt=""
             src={algogreen}
@@ -19,7 +19,7 @@ const NavBar = () => {
           <p className="nav-bar-title-text"> AlgoGreen</p>
         </Navbar.Brand>
         <Nav className="nav-bar-mid">
-          <Nav.Link href="#home" className="item">
+          <Nav.Link href="/" className="item">
             Home
           </Nav.Link>
           <Nav.Link href="#link" className="item">
