@@ -9,10 +9,22 @@ import wild from '../../../images/WL.jpg';
 import water from '../../../images/WC.jpg';
 import eco from '../../../images/eco.jpg';
 import energy from '../../../images/energy.jpg';
+import aqua1 from '../../../images/AquaCleaners1.jpg'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
 
 const Sec1Home = () => {
+
+  const [home,setHome]=useState(false)
+  const [spin,setSpin]=useState(true)
+  const handleHome = () =>{
+    setHome((prev)=>!prev)
+  }
+  const handleSpin = () =>{
+    setSpin((prev)=>!prev)
+  }
+
   return (
     <body className="container2">
       <div className='container2-top'>
@@ -89,6 +101,76 @@ const Sec1Home = () => {
           Find the popular cause and donate them
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+{      spin &&  <Card style={{ width: '288px', background: '#E5E5E5', marginTop: 35, marginRight: 50 }}>
+            <Card.Img variant="top" src={aqua1} width="288" style={{ marginBottom: 15 }} />
+            <Card.Body style={{ margin: '10px' }}>
+              <Card.Title
+                style={{
+                  color: '#219D80',
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  marginTop: '10px',
+                  marginBottom: '10px'
+                }}
+              >
+                AquaCleaners 
+              </Card.Title>
+              <Card.Text>
+              We want to use our DAO to provide funding to procure more machines to clean waste from our oceans. 
+              </Card.Text>
+              <div class="skill">
+                <p style={{ fontWeight: 600, fontSize: '18px' }}>Yes</p>
+                <div class="skill-bar skill9">
+                  <span style={{ left: '215px', fontSize: '18px' }}>66.6%</span>
+                </div>
+              </div>
+              <div class="skill">
+                <p style={{ fontWeight: 600, fontSize: '18px' }}>No</p>
+                <div class="skill-bar skill10">
+                  <span style={{ left: '215px', fontSize: '18px' }}>33.3%</span>
+                </div>
+              </div>
+              <div className='donate-btn'>
+                {   home?<div class="lds-ring" style={{right:'610px',top:'10px',marginRight:'45px'}} onClick={handleSpin}><div></div><div></div><div></div><div></div></div>:<Button className="donate-button" style={{marginRight:'3px'}} onClick={handleHome}>Yes</Button>}
+                <Button className="donate-button" style={{marginLeft:'3px'}}>No</Button>
+              </div>
+            </Card.Body>
+          </Card>}
+          { !spin &&  <Card style={{ width: '288px', background: '#E5E5E5', marginTop: 35, marginRight: 50 }}>
+            <Card.Img variant="top" src={aqua1} width="288" style={{ marginBottom: 15 }} />
+            <Card.Body style={{ margin: '10px' }}>
+              <Card.Title
+                style={{
+                  color: '#219D80',
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  marginTop: '10px',
+                  marginBottom: '10px'
+                }}
+              >
+                AquaCleaners 
+              </Card.Title>
+              <Card.Text>
+              We want to use our DAO to provide funding to procure more machines to clean waste from our oceans. 
+              </Card.Text>
+              <div class="skill">
+                <p style={{ fontWeight: 600, fontSize: '18px' }}>Yes</p>
+                <div class="skill-bar skill11">
+                  <span style={{ left: '215px', fontSize: '18px' }}>75%</span>
+                </div>
+              </div>
+              <div class="skill">
+                <p style={{ fontWeight: 600, fontSize: '18px' }}>No</p>
+                <div class="skill-bar skill12">
+                  <span style={{ left: '215px', fontSize: '18px' }}>25%</span>
+                </div>
+              </div>
+              <div className='donate-btn'>
+                {<Button className="donate-button" style={{marginRight:'3px'}} onClick={handleHome}>Yes</Button>}
+                <Button className="donate-button" style={{marginLeft:'3px'}}>No</Button>
+              </div>
+            </Card.Body>
+          </Card>}
           <Card style={{ width: '288px', background: '#E5E5E5', marginTop: 35, marginRight: 50 }}>
             <Card.Img variant="top" src={climate} width="288" style={{ marginBottom: 15 }} />
             <Card.Body style={{ margin: '10px' }}>
@@ -223,34 +305,6 @@ const Sec1Home = () => {
                 <p style={{ fontWeight: 600, fontSize: '18px' }}>Donations</p>
                 <div class="skill-bar skill7">
                   <span style={{ left: '230px', fontSize: '18px' }}>20%</span>
-                </div>
-              </div>
-              <div className='donate-btn'>
-                <Button className="donate-button">Donate Now</Button>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '288px', background: '#E5E5E5', marginTop: 35, marginRight: 50 }}>
-            <Card.Img variant="top" src={energy} width="288" style={{ marginBottom: 15 }} />
-            <Card.Body style={{ margin: '10px' }}>
-              <Card.Title
-                style={{
-                  color: '#219D80',
-                  fontWeight: 600,
-                  fontSize: '16px',
-                  marginTop: '10px',
-                  marginBottom: '10px'
-                }}
-              >
-                Energynerds
-              </Card.Title>
-              <Card.Text>
-                We'll pledge to use renewable energy! <br /> <br /> We'll be energizing the future with SOLAR POWERR!
-              </Card.Text>
-              <div class="skill">
-                <p style={{ fontWeight: 600, fontSize: '18px' }}>Donations</p>
-                <div class="skill-bar skill8">
-                  <span style={{ left: '230px', fontSize: '18px' }}>40%</span>
                 </div>
               </div>
               <div className='donate-btn'>

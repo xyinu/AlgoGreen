@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import algogreen from '../../images/Algo.png';
+import algogreen from '../../images/algo.png';
 import './navBar.css';
 
 const NavBar = () => {

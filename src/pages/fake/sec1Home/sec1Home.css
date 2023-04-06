@@ -201,6 +201,38 @@ p {
   right: 0;
 }
 
+.skill9 {
+  width: 66.6%;
+}
+
+.skill9 .skill-count9 {
+  right: 0;
+}
+
+.skill10 {
+  width: 33.3%;
+}
+
+.skill10 .skill-count10 {
+  right: 0;
+}
+
+.skill11 {
+  width: 75%;
+}
+
+.skill11 .skill-count11 {
+  right: 0;
+}
+
+.skill12 {
+  width: 25%;
+}
+
+.skill12 .skill-count12 {
+  right: 0;
+}
+
 .right-side {
   padding-right: 10%;
 }

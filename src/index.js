@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/homePage/homePage';
 import Form from './pages/form/form';
+import Fake from './pages/fake/Fake';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/form',
     element: <Form />
+  },
+  {
+    path:'/home',
+    element:<Fake/>
   }
 ]);
 
